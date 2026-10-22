@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rời nhóm Zalo hàng loạt</title>
+<style>
+  :root { --bg: #f6f7f9; --card: #fff; --text: #1a1a1a; --muted: #5f6368; --accent: #0068ff; --danger: #d93025; --warn-bg: #fff4e5; --warn: #8a4b00; --border: #e3e5e8;
+          --chrome: #dee1e6; --chrome-2: #f1f3f4; --bar: #e8eaed; --ink: #3c4043; --skel: #d4d7dc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16181c; --card: #1f2227; --text: #e8eaed; --muted: #a0a4ab; --accent: #4c9bff; --warn-bg: #3a2a14; --warn: #ffcf8a; --border: #33373d;
+            --chrome: #2b2e33; --chrome-2: #35383d; --bar: #3c4043; --ink: #e8eaed; --skel: #4a4e55; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .step { display: flex; gap: 14px; }
+  .step > div:last-child { min-width: 0; flex: 1; }
+  .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .step h2 { font-size: 17px; margin: 2px 0 6px; }
+  .step p { margin: 0 0 8px; }
+  figure { margin: 12px 0 16px; }
+  figure svg, figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); }
+  figure img { max-width: 480px; }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  .bm { display: inline-block; margin: 8px 0; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; cursor: grab; }
+  kbd { font: 13px ui-monospace, monospace; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; background: var(--bg); }
+  .warn { background: var(--warn-bg); color: var(--warn); border-radius: 12px; padding: 16px 20px; }
+  .warn ul { margin: 8px 0 0; padding-left: 20px; }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--accent); }
+  textarea { width: 100%; height: 80px; margin-top: 8px; font: 12px ui-monospace, monospace; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); }
+  button { font: inherit; padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
+
+  /* hình minh họa */
+  .f-chrome { fill: var(--chrome); }
+  .f-tab { fill: var(--chrome-2); }
+  .f-bar { fill: var(--bar); }
+  .f-page { fill: var(--card); }
+  .f-skel { fill: var(--skel); }
+  .f-accent { fill: var(--accent); }
+  .s-accent { stroke: var(--accent); fill: none; }
+  .t { fill: var(--ink); font: 13px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .t-muted { fill: var(--muted); font: 12px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .t-white { fill: #fff; font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .t-callout { fill: var(--accent); font: 700 14px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rời nhóm Zalo hàng loạt</h1>
+  <p class="sub">Dùng trên máy tính, trình duyệt Chrome / Edge / Cốc Cốc / Firefox. Không cần cài phần mềm.</p>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" class="f-accent"/>
+      </marker>
+      <!-- con trỏ chuột -->
+      <symbol id="cursor" viewBox="0 0 16 24">
+        <path d="M1 1 L1 19 L5.5 14.5 L8.5 22 L11.5 20.8 L8.5 13.5 L15 13.5 Z" fill="#fff" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="card step">
+    <div class="num">1</div>
+    <div>
+      <h2>Hiện thanh dấu trang</h2>
+      <p>Bấm <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> (máy Mac: <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>). Một thanh mỏng sẽ hiện ra ngay dưới ô địa chỉ.</p>
+      <figure>
+        <svg viewBox="0 0 640 170" role="img" aria-label="Thanh dấu trang nằm ngay dưới ô địa chỉ">
+          <rect width="640" height="170" class="f-page"/>
+          <rect width="640" height="38" class="f-chrome"/>
+          <path d="M14 38 V16 Q14 8 22 8 H190 Q198 8 198 16 V38 Z" class="f-tab"/>
+          <text x="30" y="28" class="t">Tab mới</text>
+          <rect y="38" width="640" height="44" class="f-tab"/>
+          <rect x="90" y="46" width="520" height="28" rx="14" class="f-bar"/>
+          <circle cx="24" cy="60" r="6" class="f-skel"/><circle cx="46" cy="60" r="6" class="f-skel"/><circle cx="68" cy="60" r="6" class="f-skel"/>
+          <rect y="82" width="640" height="30" class="f-tab"/>
+          <rect x="16" y="91" width="70" height="12" rx="6" class="f-skel"/><rect x="98" y="91" width="56" height="12" rx="6" class="f-skel"/><rect x="166" y="91" width="80" height="12" rx="6" class="f-skel"/>
+          <rect x="4" y="84" width="632" height="26" rx="6" class="s-accent" stroke-width="2.5" stroke-dasharray="7 5"/>
+          <path d="M400 150 C 400 130, 380 122, 360 116" class="s-accent" stroke-width="2.5" marker-end="url(#arrow)"/>
+          <text x="410" y="156" class="t-callout">Thanh dấu trang</text>
+        </svg>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">2</div>
+    <div>
+      <h2>Kéo nút xanh lên thanh dấu trang</h2>
+      <p>Bấm giữ chuột vào nút xanh bên dưới, kéo lên thanh dấu trang rồi thả ra. <b>Đừng bấm vào nút ở trang này.</b></p>
+      <figure>
+        <svg viewBox="0 0 640 210" role="img" aria-label="Kéo nút Rời nhóm Zalo lên thanh dấu trang">
+          <rect width="640" height="210" class="f-page"/>
+          <rect width="640" height="44" class="f-tab"/>
+          <rect x="90" y="8" width="520" height="28" rx="14" class="f-bar"/>
+          <rect y="44" width="640" height="34" class="f-tab"/>
+          <rect x="16" y="55" width="70" height="12" rx="6" class="f-skel"/><rect x="98" y="55" width="56" height="12" rx="6" class="f-skel"/>
+          <rect x="168" y="49" width="128" height="24" rx="6" class="f-accent" opacity=".18"/>
+          <rect x="168" y="49" width="128" height="24" rx="6" class="s-accent" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="180" y="66" class="t">Rời nhóm Zalo</text>
+          <rect x="300" y="140" width="170" height="46" rx="10" class="f-accent"/>
+          <text x="326" y="169" class="t-white">Rời nhóm Zalo</text>
+          <use href="#cursor" x="380" y="158" width="18" height="27"/>
+          <path d="M370 132 C 360 100, 300 92, 250 80" class="s-accent" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+          <text x="400" y="110" class="t-callout">Giữ chuột và kéo lên đây</text>
+        </svg>
+      </figure>
+      <a class="bm" href="__BOOKMARKLET__" onclick="alert('Đừng bấm ở đây — hãy KÉO nút này lên thanh dấu trang.'); return false;">Rời nhóm Zalo</a>
+      <details>
+        <summary>Không kéo được? Tạo dấu trang thủ công</summary>
+        <p>Bấm chuột phải vào thanh dấu trang, chọn <i>Thêm trang…</i>. Ô <i>Tên</i> gõ <b>Rời nhóm Zalo</b>, ô <i>URL</i> dán đoạn mã dưới đây vào.</p>
+        <textarea id="code" readonly>__BOOKMARKLET__</textarea>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('code').value).then(() => this.textContent = 'Đã sao chép ✓')">Sao chép mã</button>
+      </details>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">3</div>
+    <div>
+      <h2>Mở Zalo Web, đăng nhập rồi bấm dấu trang</h2>
+      <p>Vào <b>chat.zalo.me</b>, đăng nhập như bình thường và đợi danh sách tin nhắn hiện ra. Sau đó bấm vào dấu trang <b>Rời nhóm Zalo</b> vừa tạo.</p>
+      <figure>
+        <svg viewBox="0 0 640 250" role="img" aria-label="Trên trang chat.zalo.me, bấm dấu trang Rời nhóm Zalo">
+          <rect width="640" height="250" class="f-page"/>
+          <rect width="640" height="44" class="f-tab"/>
+          <rect x="90" y="8" width="520" height="28" rx="14" class="f-bar"/>
+          <text x="110" y="27" class="t">chat.zalo.me</text>
+          <rect y="44" width="640" height="34" class="f-tab"/>
+          <rect x="16" y="55" width="70" height="12" rx="6" class="f-skel"/><rect x="98" y="55" width="56" height="12" rx="6" class="f-skel"/>
+          <rect x="168" y="49" width="128" height="24" rx="6" class="f-accent" opacity=".18"/>
+          <text x="180" y="66" class="t">Rời nhóm Zalo</text>
+          <use href="#cursor" x="236" y="60" width="18" height="27"/>
+          <!-- giao diện chat -->
+          <rect y="78" width="200" height="172" class="f-tab"/>
+          <g class="f-skel">
+            <circle cx="30" cy="104" r="12"/><rect x="50" y="96" width="110" height="8" rx="4"/><rect x="50" y="108" width="80" height="6" rx="3"/>
+            <circle cx="30" cy="144" r="12"/><rect x="50" y="136" width="120" height="8" rx="4"/><rect x="50" y="148" width="70" height="6" rx="3"/>
+            <circle cx="30" cy="184" r="12"/><rect x="50" y="176" width="100" height="8" rx="4"/><rect x="50" y="188" width="90" height="6" rx="3"/>
+            <circle cx="30" cy="224" r="12"/><rect x="50" y="216" width="115" height="8" rx="4"/><rect x="50" y="228" width="60" height="6" rx="3"/>
+            <rect x="230" y="200" width="180" height="26" rx="13"/><rect x="420" y="160" width="190" height="26" rx="13"/>
+          </g>
+          <path d="M360 120 C 330 110, 290 90, 262 80" class="s-accent" stroke-width="2.5" marker-end="url(#arrow)"/>
+          <text x="368" y="126" class="t-callout">Bấm vào đây</text>
+        </svg>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">4</div>
+    <div>
+      <h2>Chọn nhóm công ty cũ</h2>
+      <p>Một bảng danh sách nhóm sẽ hiện ra:</p>
+      <ol>
+        <li>Gõ tên công ty cũ vào ô tìm kiếm (không cần gõ dấu).</li>
+        <li>Bấm <b>Chọn hết đang hiện</b>.</li>
+        <li>Xem lại từng nhóm, <b>bỏ tick</b> những nhóm muốn giữ lại.</li>
+      </ol>
+      <figure>
+        <img src="images/2-chon-nhom.png" alt="Bảng chọn nhóm: đã lọc theo tên công ty, tick 3 nhóm, bỏ tick nhóm Toàn công ty">
+        <figcaption>Ví dụ: lọc “cty abc”, chọn hết, rồi bỏ tick nhóm “Toàn công ty” để giữ lại.</figcaption>
+      </figure>
+      <h3 style="font-size:16px;margin:20px 0 6px">Nhóm không đặt theo tên công ty?</h3>
+      <p>Nhiều nhóm như “Hội ăn trưa”, “Dự án Sunrise”… không có tên công ty. Khi đó hãy tìm theo <b>đồng nghiệp cũ</b>:</p>
+      <ol>
+        <li>Tick 1–2 nhóm <b>chắc chắn</b> là của công ty cũ (ví dụ nhóm toàn công ty).</li>
+        <li>Bấm <b>Tìm nhóm có người chung</b>.</li>
+        <li>Nhóm có nhiều đồng nghiệp cũ nhất sẽ được đưa lên đầu, kèm số “người chung”. Xem từng nhóm và tự tick những nhóm đúng là của công ty.</li>
+      </ol>
+      <figure>
+        <img src="images/4-nguoi-chung.png" alt="Sau khi tick nhóm Toàn thể nhân viên và bấm Tìm nhóm có người chung, các nhóm được xếp theo số người chung">
+        <figcaption>Ví dụ: “Sale miền Bắc” có 31 người chung nên gần như chắc chắn là nhóm công ty. “Kèo cầu lông” chỉ có 4 người chung, có thể là nhóm bạn bè nên để lại.</figcaption>
+      </figure>
+      <p>Lần đầu nên tick <b>Chạy thử</b> để xem trước mà không rời nhóm nào.</p>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">5</div>
+    <div>
+      <h2>Bấm “Rời … nhóm” và đợi</h2>
+      <p>Bấm nút đỏ, đọc lại danh sách trong hộp xác nhận rồi bấm <b>OK</b>. Mỗi nhóm cách nhau 3–7 giây. Trong lúc chạy cứ để nguyên tab đó, không đóng.</p>
+      <figure>
+        <img src="images/3-hoan-tat.png" alt="Bảng sau khi chạy xong: các nhóm đã rời bị gạch ngang, nhật ký báo Xong 3/3 nhóm">
+        <figcaption>Khi xong, các nhóm đã rời bị gạch ngang và dòng cuối báo “Xong”. Bấm F5 để tải lại Zalo.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="warn">
+    <b>Lưu ý</b>
+    <ul>
+      <li>Đã rời nhóm thì không tự vào lại được, phải nhờ người trong nhóm thêm lại. Hãy xem kỹ danh sách trước khi xác nhận.</li>
+      <li>Nếu bạn là <b>trưởng nhóm</b>, Zalo có thể bắt chuyển quyền trưởng nhóm trước khi rời, nên các nhóm đó có thể báo lỗi.</li>
+      <li>Nếu báo lỗi liên tục, công cụ sẽ tự dừng. Khi đó hãy đợi vài giờ rồi làm tiếp.</li>
+      <li>Công cụ chỉ chạy trong trình duyệt của bạn và không gửi dữ liệu đi đâu khác ngoài Zalo.</li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>

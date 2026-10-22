@@ -1,0 +1,20 @@
+{
+  "name": "zalo-leave-groups",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node bookmarklet/build.js",
+    "start": "node leave-groups.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Rời nhiều nhóm Zalo cùng lúc (bookmarklet cho Zalo Web + script Node.js)",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.4",
+    "zca-js": "^2.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
