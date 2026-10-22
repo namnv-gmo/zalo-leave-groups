@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rời nhóm Zalo hàng loạt</title>
+<title>Dọn dẹp Zalo công ty cũ</title>
 <style>
   :root { --bg: #f6f7f9; --card: #fff; --text: #1a1a1a; --muted: #5f6368; --accent: #0068ff; --danger: #d93025; --warn-bg: #fff4e5; --warn: #8a4b00; --border: #e3e5e8;
           --chrome: #dee1e6; --chrome-2: #f1f3f4; --bar: #e8eaed; --ink: #3c4043; --skel: #d4d7dc; }
@@ -22,6 +22,7 @@
   .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; }
   .step h2 { font-size: 17px; margin: 2px 0 6px; }
   .step p { margin: 0 0 8px; }
+  .step h3 { font-size: 16px; margin: 24px 0 6px; }
   figure { margin: 12px 0 16px; }
   figure svg, figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); }
   figure img { max-width: 480px; }
@@ -51,8 +52,8 @@
 </head>
 <body>
 <main>
-  <h1>Rời nhóm Zalo hàng loạt</h1>
-  <p class="sub">Dùng trên máy tính, trình duyệt Chrome / Edge / Cốc Cốc / Firefox. Không cần cài phần mềm.</p>
+  <h1>Dọn dẹp Zalo công ty cũ</h1>
+  <p class="sub">Rời nhóm, tắt thông báo, lưu trữ hàng loạt nhóm và trò chuyện của công ty cũ. Dùng trên máy tính, trình duyệt Chrome / Edge / Cốc Cốc / Firefox. Không cần cài phần mềm.</p>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -164,11 +165,13 @@
         <li>Bấm <b>Chọn hết đang hiện</b>.</li>
         <li>Xem lại từng nhóm, <b>bỏ tick</b> những nhóm muốn giữ lại.</li>
       </ol>
+      <p>Nếu bạn là <b>trưởng nhóm</b>, ngay dưới tên nhóm sẽ có ô để chọn người nhận quyền trưởng nhóm. Phó nhóm được xếp lên đầu. Công cụ sẽ chuyển quyền cho người đó rồi mới rời nhóm.</p>
       <figure>
-        <img src="images/2-chon-nhom.png" alt="Bảng chọn nhóm: đã lọc theo tên công ty, tick 3 nhóm, bỏ tick nhóm Toàn công ty">
-        <figcaption>Ví dụ: lọc “cty abc”, chọn hết, rồi bỏ tick nhóm “Toàn công ty” để giữ lại.</figcaption>
+        <img src="images/2-chon-nhom.png" alt="Bảng chọn nhóm: lọc theo tên công ty, tick 3 nhóm, nhóm Team Marketing có ô chọn người nhận quyền trưởng nhóm">
+        <figcaption>Ví dụ: lọc “cty abc”, chọn hết, bỏ tick nhóm “Toàn công ty” để giữ lại. Ở nhóm “Team Marketing”, quyền trưởng nhóm được chuyển cho phó nhóm.</figcaption>
       </figure>
-      <h3 style="font-size:16px;margin:20px 0 6px">Nhóm không đặt theo tên công ty?</h3>
+
+      <h3>Nhóm không đặt theo tên công ty?</h3>
       <p>Nhiều nhóm như “Hội ăn trưa”, “Dự án Sunrise”… không có tên công ty. Khi đó hãy tìm theo <b>đồng nghiệp cũ</b>:</p>
       <ol>
         <li>Tick 1–2 nhóm <b>chắc chắn</b> là của công ty cũ (ví dụ nhóm toàn công ty).</li>
@@ -176,21 +179,63 @@
         <li>Nhóm có nhiều đồng nghiệp cũ nhất sẽ được đưa lên đầu, kèm số “người chung”. Xem từng nhóm và tự tick những nhóm đúng là của công ty.</li>
       </ol>
       <figure>
-        <img src="images/4-nguoi-chung.png" alt="Sau khi tick nhóm Toàn thể nhân viên và bấm Tìm nhóm có người chung, các nhóm được xếp theo số người chung">
-        <figcaption>Ví dụ: “Sale miền Bắc” có 31 người chung nên gần như chắc chắn là nhóm công ty. “Kèo cầu lông” chỉ có 4 người chung, có thể là nhóm bạn bè nên để lại.</figcaption>
+        <img src="images/4-nguoi-chung.png" alt="Các nhóm được xếp theo số người chung với nhóm Toàn công ty">
+        <figcaption>“Hội ăn trưa” có 14 người chung nên gần như chắc chắn là nhóm công ty. “Kèo cầu lông” chỉ có 4 người chung, có thể là nhóm bạn bè nên để lại.</figcaption>
       </figure>
-      <p>Lần đầu nên tick <b>Chạy thử</b> để xem trước mà không rời nhóm nào.</p>
+
+      <h3>Tìm nhóm lâu không hoạt động</h3>
+      <p>Bấm <b>Kiểm tra lâu không hoạt động</b>. Công cụ xem tin nhắn cuối của từng nhóm đang hiện, rồi đưa nhóm im lâu nhất lên đầu. Nếu có nhiều nhóm thì bước này mất khoảng nửa phút.</p>
+      <figure>
+        <img src="images/5-hoat-dong.png" alt="Các nhóm được xếp theo thời gian tin nhắn cuối">
+        <figcaption>Nhóm nào cũng có dòng “tin cuối: … trước”, nên dễ thấy nhóm nào đã “chết” từ lâu.</figcaption>
+      </figure>
     </div>
   </div>
 
   <div class="card step">
     <div class="num">5</div>
     <div>
-      <h2>Bấm “Rời … nhóm” và đợi</h2>
-      <p>Bấm nút đỏ, đọc lại danh sách trong hộp xác nhận rồi bấm <b>OK</b>. Mỗi nhóm cách nhau 3–7 giây. Trong lúc chạy cứ để nguyên tab đó, không đóng.</p>
+      <h2>Chọn hành động rồi bấm nút đỏ</h2>
+      <p>Ở ô <b>Hành động</b>, chọn một trong các cách sau:</p>
+      <ul>
+        <li><b>Rời nhóm</b>: ra khỏi nhóm hẳn. Tick thêm <i>Rời im lặng</i> nếu không muốn nhóm hiện thông báo “đã rời nhóm”.</li>
+        <li><b>Tắt thông báo (vẫn ở lại)</b>: dành cho nhóm ngại rời, ví dụ nhóm có sếp cũ.</li>
+        <li><b>Lưu trữ</b>: ẩn nhóm khỏi danh sách trò chuyện chính, nhưng vẫn là thành viên.</li>
+        <li><b>Tắt thông báo + Lưu trữ</b>: im lặng và gọn mắt nhất mà không phải rời.</li>
+      </ul>
       <figure>
-        <img src="images/3-hoan-tat.png" alt="Bảng sau khi chạy xong: các nhóm đã rời bị gạch ngang, nhật ký báo Xong 3/3 nhóm">
-        <figcaption>Khi xong, các nhóm đã rời bị gạch ngang và dòng cuối báo “Xong”. Bấm F5 để tải lại Zalo.</figcaption>
+        <img src="images/6-tat-thong-bao.png" alt="Chọn hành động Tắt thông báo cho nhóm Lớp 12A1">
+        <figcaption>Ví dụ: tắt thông báo nhóm lớp cũ mà không rời nhóm.</figcaption>
+      </figure>
+      <p>Lần đầu nên tick <b>Chạy thử</b> để xem trước mà không thay đổi gì. Khi đã chắc chắn, bấm nút đỏ, đọc lại danh sách trong hộp xác nhận rồi bấm <b>OK</b>. Mỗi mục cách nhau 3–7 giây. Trong lúc chạy cứ để nguyên tab đó, không đóng.</p>
+      <figure>
+        <img src="images/3-hoan-tat.png" alt="Bảng sau khi chạy xong: các nhóm đã rời bị gạch ngang, nhật ký báo Xong">
+        <figcaption>Khi xong, các mục đã làm bị gạch ngang. Công cụ tự <b>tải về file kết quả (CSV)</b>, có cả tên trưởng nhóm, để nếu lỡ rời nhầm thì biết nhờ ai thêm lại.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">6</div>
+    <div>
+      <h2>Dọn cả trò chuyện riêng với đồng nghiệp cũ (tùy chọn)</h2>
+      <p>Ở tab <b>Nhóm</b>, tick các nhóm công ty cũ rồi chuyển sang tab <b>Đồng nghiệp cũ (chat riêng)</b>. Công cụ sẽ liệt kê những người bạn có mặt trong các nhóm đó. Từ đây có thể <b>tắt thông báo</b> hoặc <b>lưu trữ</b> cuộc trò chuyện với họ.</p>
+      <p>Công cụ <b>không xóa tin nhắn</b> và <b>không hủy kết bạn</b>. Nếu đã rời nhóm công ty từ trước, công cụ vẫn nhớ danh sách đồng nghiệp cũ trên trình duyệt này.</p>
+      <figure>
+        <img src="images/7-dong-nghiep.png" alt="Tab Đồng nghiệp cũ liệt kê 6 người bạn có trong các nhóm công ty">
+        <figcaption>Người thân và bạn bè không có trong nhóm công ty sẽ không hiện ở đây.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">?</div>
+    <div>
+      <h2>Bị dừng giữa chừng?</h2>
+      <p>Nếu Zalo báo lỗi liên tục, công cụ sẽ tự dừng để tránh bị khóa tính năng. Lỡ đóng tab cũng không sao. Lần sau bấm dấu trang, công cụ sẽ hỏi có muốn <b>làm tiếp các mục còn lại</b> không.</p>
+      <figure>
+        <img src="images/8-lam-tiep.png" alt="Thông báo Lần trước còn 4 mục chưa xong, với nút Chọn lại các mục đó">
+        <figcaption>Bấm <b>Chọn lại các mục đó</b>, kiểm tra lại rồi bấm nút đỏ. Nên đợi vài giờ rồi mới làm tiếp. Link <b>Tải lịch sử đã làm</b> cho xem lại mọi thứ đã làm trên trình duyệt này.</figcaption>
       </figure>
     </div>
   </div>
@@ -199,8 +244,8 @@
     <b>Lưu ý</b>
     <ul>
       <li>Đã rời nhóm thì không tự vào lại được, phải nhờ người trong nhóm thêm lại. Hãy xem kỹ danh sách trước khi xác nhận.</li>
-      <li>Nếu bạn là <b>trưởng nhóm</b>, Zalo có thể bắt chuyển quyền trưởng nhóm trước khi rời, nên các nhóm đó có thể báo lỗi.</li>
-      <li>Nếu báo lỗi liên tục, công cụ sẽ tự dừng. Khi đó hãy đợi vài giờ rồi làm tiếp.</li>
+      <li>Nếu bạn là <b>trưởng nhóm</b> mà chưa chọn người nhận quyền, công cụ sẽ bỏ qua nhóm đó, không rời.</li>
+      <li>Đừng chạy quá nhiều mục một lúc. Khoảng 30 mục mỗi lần là an toàn. Nếu bị dừng vì lỗi, hãy đợi vài giờ rồi làm tiếp.</li>
       <li>Công cụ chỉ chạy trong trình duyệt của bạn và không gửi dữ liệu đi đâu khác ngoài Zalo.</li>
     </ul>
   </div>

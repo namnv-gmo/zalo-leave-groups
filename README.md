@@ -1,6 +1,6 @@
-# Rời nhóm Zalo hàng loạt
+# Dọn dẹp Zalo công ty cũ
 
-Công cụ rời nhiều nhóm Zalo cùng lúc, có checkbox để tự chọn nhóm và chờ 3–7 giây giữa mỗi lần rời để tránh bị Zalo chặn.
+Công cụ rời / tắt thông báo / lưu trữ hàng loạt nhóm và trò chuyện của công ty cũ trên Zalo Web, có checkbox để tự chọn và chờ 3–7 giây giữa mỗi thao tác để tránh bị Zalo chặn.
 
 **Trang hướng dẫn cài đặt (cho người dùng):** https://namnv-gmo.github.io/zalo-leave-groups/
 
@@ -12,7 +12,13 @@ Mở trang hướng dẫn ở trên, kéo nút “Rời nhóm Zalo” lên thanh
 
 - Lọc nhóm theo tên (không cần gõ dấu).
 - **Tìm nhóm có người chung**: tick 1–2 nhóm chắc chắn của công ty cũ, công cụ xếp các nhóm có nhiều đồng nghiệp cũ lên đầu — dùng khi nhóm không đặt theo tên công ty.
-- Chế độ chạy thử, rời im lặng, tự dừng khi lỗi 2 lần liên tiếp.
+- **Kiểm tra lâu không hoạt động**: xếp nhóm theo thời gian tin nhắn cuối.
+- Hành động: **rời nhóm** (có rời im lặng), **tắt thông báo**, **lưu trữ**, hoặc tắt thông báo + lưu trữ.
+- **Trưởng nhóm**: chọn người nhận quyền trưởng nhóm, công cụ chuyển quyền rồi mới rời.
+- **Đồng nghiệp cũ (chat riêng)**: liệt kê bạn bè có trong các nhóm công ty để tắt thông báo / lưu trữ trò chuyện (không xóa tin, không hủy kết bạn).
+- **File kết quả CSV** tự tải về sau mỗi lần chạy (kèm tên trưởng nhóm để nhờ thêm lại nếu rời nhầm) và lịch sử đã làm.
+- **Làm tiếp**: nếu bị dừng giữa chừng (lỗi liên tiếp, đóng tab), lần sau mở lại sẽ có nút chọn lại các mục còn dở.
+- Chế độ chạy thử, chờ 3–7 giây giữa mỗi thao tác, tự dừng khi lỗi 2 lần liên tiếp.
 
 Mã nguồn: [`bookmarklet/zalo-leave.js`](bookmarklet/zalo-leave.js). Bookmarklet dùng phiên đăng nhập sẵn có của trình duyệt và chỉ gửi yêu cầu tới máy chủ Zalo.
 
