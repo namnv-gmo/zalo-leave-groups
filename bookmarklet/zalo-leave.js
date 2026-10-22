@@ -93,7 +93,8 @@ function makeURL(base, params = {}) {
 }
 
 function getImei() {
-  for (const key of ["z_uuid", "sh_z_uuid"]) {
+  // cùng thứ tự Zalo Web đọc
+  for (const key of ["sh_z_uuid", "z_uuid"]) {
     const v = localStorage.getItem(key);
     if (v) return v.replace(/^"|"$/g, "");
   }
